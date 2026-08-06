@@ -1,36 +1,37 @@
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#0a0a0a;
-color:white;
-text-align:center;
+color:#fff;
+line-height:1.6;
 }
 
 header{
-background:#111;
-padding:40px 20px;
+background:#000;
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
 }
 
-header h1{
-font-size:3rem;
+.logo{
+width:120px;
+border-radius:50%;
+}
+
+h1{
 color:#d6b893;
-margin:0;
-}
-
-header p{
-font-size:1.2rem;
-color:#ccc;
+margin:10px 0;
 }
 
 nav{
-background:#1a1a1a;
-padding:15px;
+margin-top:15px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
+margin:0 12px;
 font-weight:bold;
 }
 
@@ -39,26 +40,23 @@ color:#d6b893;
 }
 
 .hero{
-padding:80px 20px;
+text-align:center;
+padding:50px 20px;
 }
 
-.hero h2{
-font-size:2.5rem;
-color:#d6b893;
-}
-
-.hero p{
-max-width:700px;
-margin:20px auto;
-font-size:18px;
-line-height:1.6;
+.hero-image{
+width:300px;
+max-width:90%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(214,184,147,.4);
 }
 
 .button{
 display:inline-block;
-padding:15px 30px;
+padding:14px 30px;
+margin:10px;
 background:#d6b893;
-color:black;
+color:#000;
 text-decoration:none;
 border-radius:30px;
 font-weight:bold;
@@ -68,13 +66,10 @@ font-weight:bold;
 background:white;
 }
 
-section{
-padding:60px 20px;
-}
-
 footer{
 background:#111;
 padding:20px;
-color:#888;
+text-align:center;
 margin-top:40px;
+color:#aaa;
 }
