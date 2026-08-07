@@ -1,10 +1,6 @@
 /* =====================================================
-   RAE MEDYE OFFICIAL WEBSITE
-   Main stylesheet
+   RAE MEDYE — OFFICIAL WEBSITE
    ===================================================== */
-
-
-/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -34,16 +30,16 @@ a {
 }
 
 
-/* ================= VARIABLES ================= */
+/* ================= COLORS ================= */
 
 :root {
     --black: #050505;
-    --dark: #0c0c0c;
+    --dark: #0b0b0b;
     --dark-grey: #151515;
     --gold: #d6b893;
     --light-gold: #ead4b3;
     --white: #ffffff;
-    --grey: #a7a7a7;
+    --grey: #a8a8a8;
     --border: rgba(214, 184, 147, 0.25);
 }
 
@@ -54,15 +50,15 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.95);
+    background: rgba(5, 5, 5, 0.96);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: auto;
+    width: min(1200px, 100%);
     min-height: 76px;
+    margin: auto;
     padding: 0 25px;
 
     display: flex;
@@ -101,7 +97,7 @@ a {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .navigation a:hover,
@@ -111,8 +107,8 @@ a {
 
 .menu-toggle {
     display: none;
-    background: none;
-    border: none;
+    border: 0;
+    background: transparent;
     color: white;
     font-size: 28px;
     cursor: pointer;
@@ -148,41 +144,42 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.88) 0%,
-            rgba(0,0,0,0.60) 45%,
-            rgba(0,0,0,0.15) 100%
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.62) 45%,
+            rgba(0, 0, 0, 0.18) 100%
         );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
-    width: 100%;
+    width: min(1200px, 100%);
     margin: auto;
-    padding: 70px 25px;
+    padding: 80px 25px;
 }
 
 .hero-label {
     color: var(--gold);
     font-size: 12px;
+    font-weight: 700;
     letter-spacing: 4px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(55px, 9vw, 110px);
-    line-height: 0.88;
-    letter-spacing: -3px;
+    font-size: clamp(60px, 9vw, 110px);
+    line-height: 0.86;
+    letter-spacing: -4px;
     font-weight: 800;
 }
 
 .hero h1 span {
+    display: block;
     color: var(--gold);
 }
 
 .hero-tagline {
-    margin-top: 25px;
+    margin-top: 28px;
     color: #eeeeee;
     font-size: 17px;
     letter-spacing: 2px;
@@ -207,12 +204,15 @@ a {
 
     border: 1px solid var(--gold);
 
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 
-    transition: 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .btn-primary {
@@ -226,20 +226,21 @@ a {
 }
 
 .btn-outline {
-    color: white;
     background: transparent;
+    color: white;
 }
 
 .btn-outline:hover {
     background: var(--gold);
     color: #050505;
+    transform: translateY(-2px);
 }
 
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
-    max-width: 1200px;
+    width: min(1200px, 100%);
     margin: auto;
     padding: 100px 25px;
 }
@@ -255,7 +256,7 @@ a {
 .small-title {
     color: var(--gold);
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -268,6 +269,11 @@ a {
 
 .section-heading h2 span {
     color: var(--gold);
+}
+
+.section-description {
+    color: var(--grey);
+    margin-top: 15px;
 }
 
 
@@ -310,13 +316,12 @@ a {
 }
 
 .release-content h2 {
-    color: white;
     font-size: clamp(35px, 5vw, 58px);
     line-height: 1.05;
     margin-bottom: 20px;
 }
 
-.release-content p {
+.release-content > p:not(.small-title) {
     color: var(--grey);
     max-width: 500px;
     margin-bottom: 30px;
@@ -337,7 +342,6 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .feature-overlay {
@@ -347,15 +351,15 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.9),
-            rgba(0,0,0,0.25)
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.22)
         );
 }
 
 .feature-content {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    width: min(1200px, 100%);
     margin: auto;
     padding: 120px 25px;
 }
@@ -369,10 +373,6 @@ a {
 
 /* ================= MUSIC ================= */
 
-.music-preview {
-    max-width: 1200px;
-}
-
 .music-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -381,11 +381,13 @@ a {
 }
 
 .music-card {
+    min-height: 220px;
+    padding: 35px;
     background: var(--dark-grey);
     border: 1px solid var(--border);
-    padding: 35px;
-    min-height: 220px;
-    transition: 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .music-card:hover {
@@ -401,7 +403,8 @@ a {
 }
 
 .music-card h3 {
-    font-size: 24px;
+    font-size: 23px;
+    line-height: 1.2;
     margin-bottom: 8px;
 }
 
@@ -413,6 +416,7 @@ a {
 .music-card a {
     color: var(--gold);
     font-size: 12px;
+    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -434,11 +438,6 @@ a {
     background: #111;
 }
 
-.gallery-item.large {
-    grid-row: span 2;
-    aspect-ratio: auto;
-}
-
 .gallery-item img {
     width: 100%;
     height: 100%;
@@ -456,11 +455,11 @@ a {
 }
 
 
-/* ================= MESSAGE ================= */
+/* ================= BRAND MESSAGE ================= */
 
 .message {
-    text-align: center;
     padding: 120px 25px;
+    text-align: center;
     background: #080808;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -470,13 +469,14 @@ a {
     width: 130px;
     height: 130px;
     object-fit: cover;
+    border-radius: 50%;
     margin: 0 auto 30px;
 }
 
 .message h2 {
+    color: var(--gold);
     font-size: clamp(35px, 6vw, 65px);
     line-height: 1.05;
-    color: var(--gold);
 }
 
 .message p {
@@ -497,6 +497,7 @@ a {
     width: 80px;
     height: 80px;
     object-fit: cover;
+    border-radius: 50%;
     margin: auto;
 }
 
@@ -542,9 +543,7 @@ a {
 }
 
 
-/* =====================================================
-   TABLET
-   ===================================================== */
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -559,13 +558,10 @@ a {
     .music-grid {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+/* ================= MOBILE ================= */
 
 @media (max-width: 700px) {
 
@@ -574,14 +570,14 @@ a {
         padding: 0 18px;
     }
 
-    .brand span {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
     .brand img {
         width: 40px;
         height: 40px;
+    }
+
+    .brand span {
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
     .menu-toggle {
@@ -598,9 +594,10 @@ a {
         flex-direction: column;
         align-items: stretch;
 
+        padding: 15px 20px;
+
         background: #080808;
         border-bottom: 1px solid var(--border);
-        padding: 15px 20px;
     }
 
     .navigation.open {
@@ -611,6 +608,7 @@ a {
         padding: 14px 5px;
         border-bottom: 1px solid #1b1b1b;
     }
+
 
     /* HERO */
 
@@ -626,18 +624,19 @@ a {
         background:
             linear-gradient(
                 180deg,
-                rgba(0,0,0,0.35),
-                rgba(0,0,0,0.9)
+                rgba(0, 0, 0, 0.25),
+                rgba(0, 0, 0, 0.92)
             );
     }
 
     .hero-content {
-        padding: 80px 20px 55px;
         align-self: flex-end;
+        padding: 80px 20px 55px;
     }
 
     .hero h1 {
-        font-size: 65px;
+        font-size: 64px;
+        letter-spacing: -2px;
     }
 
     .hero-tagline {
@@ -654,11 +653,13 @@ a {
         width: 100%;
     }
 
+
     /* SECTIONS */
 
     .section {
         padding: 70px 20px;
     }
+
 
     /* RELEASE */
 
@@ -667,13 +668,6 @@ a {
         gap: 35px;
     }
 
-    .release-image {
-        order: 1;
-    }
-
-    .release-content {
-        order: 2;
-    }
 
     /* FEATURE */
 
@@ -685,12 +679,14 @@ a {
         padding: 100px 20px;
     }
 
+
     /* MUSIC */
 
     .music-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+
 
     /* GALLERY */
 
@@ -699,10 +695,6 @@ a {
         gap: 8px;
     }
 
-    .gallery-item.large {
-        grid-row: auto;
-        aspect-ratio: 1 / 1;
-    }
 
     /* MESSAGE */
 
@@ -710,18 +702,16 @@ a {
         padding: 80px 20px;
     }
 
+
     /* FOOTER */
 
     .footer-links {
         gap: 15px;
     }
-
 }
 
 
-/* =====================================================
-   SMALL PHONES
-   ===================================================== */
+/* ================= SMALL PHONES ================= */
 
 @media (max-width: 400px) {
 
@@ -736,5 +726,4 @@ a {
     .section-heading h2 {
         font-size: 35px;
     }
-
-  }
+}
