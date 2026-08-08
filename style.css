@@ -1488,3 +1488,120 @@ a {
     }
 
 }
+/* =========================================================
+   MERCH PAGE
+   ========================================================= */
+
+.merch-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(80, 180, 230, .18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #050608,
+            var(--navy)
+        );
+}
+
+.merch-hero-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 80px 25px;
+}
+
+.merch-hero-content h1 {
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: .95;
+}
+
+.merch-hero-content h1 span {
+    display: block;
+    color: var(--sky);
+}
+
+.merch-hero-content > p:last-child {
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.merch-section {
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.merch-coming-soon {
+    max-width: 850px;
+    margin: 50px auto 0;
+    padding: 70px 30px;
+    text-align: center;
+
+    background: var(--navy);
+    border: 1px solid var(--line);
+}
+
+.merch-mark {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.merch-coming-soon h3 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 18px;
+}
+
+.merch-coming-soon p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+
+    .merch-hero {
+        min-height: 50vh;
+    }
+
+    .merch-hero-content {
+        padding: 70px 20px;
+    }
+
+    .merch-hero-content h1 {
+        font-size: 52px;
+    }
+
+    .merch-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .merch-coming-soon {
+        margin-top: 35px;
+        padding: 55px 20px;
+    }
+
+                     }
