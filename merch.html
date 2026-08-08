@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Merch | Rae Medye</title>
+
+    <meta
+        name="description"
+        content="Official Rae Medye merchandise."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            <img src="images/logo.jpg" alt="Rae Medye Logo">
+            <span>RAE MEDYE</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="navigation">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="music.html">Music</a>
+            <a href="shows.html">Shows</a>
+            <a href="merch.html" class="active">Merch</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="videos.html">Videos</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="merch-hero">
+
+        <div class="merch-hero-content">
+
+            <p class="small-title">
+                OFFICIAL MERCHANDISE
+            </p>
+
+            <h1>
+                Rae
+                <span>Medye</span>
+            </h1>
+
+            <p>
+                Wear the sound. Represent the journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section merch-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                RAE MEDYE COLLECTION
+            </p>
+
+            <h2>
+                Official
+                <span>Merch</span>
+            </h2>
+
+            <p class="section-description">
+                Official Rae Medye merchandise is coming soon.
+                Stay connected for exclusive clothing, accessories
+                and artist merchandise.
+            </p>
+
+        </div>
+
+
+        <div class="merch-coming-soon">
+
+            <div class="merch-mark">
+                RM
+            </div>
+
+            <h3>
+                Merchandise Coming Soon
+            </h3>
+
+            <p>
+                The official Rae Medye collection is currently
+                being prepared. New merchandise and exclusive
+                releases will be announced here.
+            </p>
+
+            <a
+                href="https://linktr.ee/RaeMedye"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Follow Rae Medye
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-logo">
+
+        <img
+            src="images/logo.jpg"
+            alt="Rae Medye Logo"
+        >
+
+        <h3>RAE MEDYE</h3>
+
+        <p>
+            Music for Peace • Hope • Unity
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="shows.html">Shows</a>
+        <a href="merch.html">Merch</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+
+        <a
+            href="https://linktr.ee/RaeMedye"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Linktree
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Rae Medye. All Rights Reserved.
+        </p>
+    </div>
+
+</footer>
+
+
+<script>
+
+const menuToggle =
+    document.querySelector(".menu-toggle");
+
+const navigation =
+    document.querySelector(".navigation");
+
+menuToggle.addEventListener("click", function () {
+
+    navigation.classList.toggle("open");
+
+    const isOpen =
+        navigation.classList.contains("open");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+});
+
+document
+    .querySelectorAll(".navigation a")
+    .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navigation.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+</script>
+
+</body>
+  </html>
